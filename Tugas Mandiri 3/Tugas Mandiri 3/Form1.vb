@@ -62,4 +62,17 @@
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = "rasyid" And TextBox2.Text = "123456" Then
+            login_berhasil()
+        Else
+            MsgBox("maaf password salah")
+        End If
+    End Sub
+
+    Private Sub login_berhasil()
+        Form_output.user_name.Text = TextBox1.Text
+        Form_output.Show()
+    End Sub
+
 End Class

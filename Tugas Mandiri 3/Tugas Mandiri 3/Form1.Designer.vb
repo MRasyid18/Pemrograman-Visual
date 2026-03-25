@@ -24,15 +24,17 @@ Partial Class Form_input
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         Panel1 = New Panel()
+        Panel2 = New Panel()
+        Button1 = New Button()
+        TextBox2 = New TextBox()
+        TextBox1 = New TextBox()
+        Label4 = New Label()
+        Label3 = New Label()
         Label2 = New Label()
         Label1 = New Label()
-        Panel2 = New Panel()
-        Label3 = New Label()
-        Label4 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
         Timer1 = New Timer(components)
+        Label5 = New Label()
+        Label6 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -46,6 +48,76 @@ Partial Class Form_input
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(339, 436)
         Panel1.TabIndex = 0
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = SystemColors.ControlText
+        Panel2.Controls.Add(Label6)
+        Panel2.Controls.Add(Label5)
+        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(TextBox2)
+        Panel2.Controls.Add(TextBox1)
+        Panel2.Controls.Add(Label4)
+        Panel2.Controls.Add(Label3)
+        Panel2.Location = New Point(1, 160)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(339, 281)
+        Panel2.TabIndex = 2
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = SystemColors.ActiveCaptionText
+        Button1.FlatAppearance.BorderColor = Color.White
+        Button1.FlatAppearance.BorderSize = 3
+        Button1.FlatAppearance.MouseDownBackColor = Color.DarkOrchid
+        Button1.FlatAppearance.MouseOverBackColor = Color.Violet
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.ForeColor = SystemColors.ControlLightLight
+        Button1.Location = New Point(173, 176)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(94, 36)
+        Button1.TabIndex = 4
+        Button1.Text = "Log In"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.CharacterCasing = CharacterCasing.Lower
+        TextBox2.Location = New Point(142, 106)
+        TextBox2.MaxLength = 10
+        TextBox2.Name = "TextBox2"
+        TextBox2.PasswordChar = "."c
+        TextBox2.Size = New Size(125, 27)
+        TextBox2.TabIndex = 3
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(142, 59)
+        TextBox1.MaxLength = 6
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(125, 27)
+        TextBox1.TabIndex = 2
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.ForeColor = SystemColors.ControlLightLight
+        Label4.Location = New Point(37, 106)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(70, 20)
+        Label4.TabIndex = 1
+        Label4.Text = "Password"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.ForeColor = SystemColors.ControlLightLight
+        Label3.Location = New Point(37, 59)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(75, 20)
+        Label3.TabIndex = 0
+        Label3.Text = "Username"
         ' 
         ' Label2
         ' 
@@ -69,77 +141,30 @@ Partial Class Form_input
         Label1.TabIndex = 0
         Label1.Text = "VISUAL STUDIO 2026"
         ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = SystemColors.ControlText
-        Panel2.Controls.Add(Button1)
-        Panel2.Controls.Add(TextBox2)
-        Panel2.Controls.Add(TextBox1)
-        Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(Label3)
-        Panel2.Location = New Point(1, 160)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(339, 281)
-        Panel2.TabIndex = 2
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.Transparent
-        Label3.ForeColor = SystemColors.ControlLightLight
-        Label3.Location = New Point(37, 59)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(75, 20)
-        Label3.TabIndex = 0
-        Label3.Text = "Username"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.ForeColor = SystemColors.ControlLightLight
-        Label4.Location = New Point(37, 106)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(70, 20)
-        Label4.TabIndex = 1
-        Label4.Text = "Password"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(142, 59)
-        TextBox1.MaxLength = 6
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(125, 27)
-        TextBox1.TabIndex = 2
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(142, 106)
-        TextBox2.MaxLength = 10
-        TextBox2.Name = "TextBox2"
-        TextBox2.PasswordChar = "."c
-        TextBox2.Size = New Size(125, 27)
-        TextBox2.TabIndex = 3
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = SystemColors.ActiveCaptionText
-        Button1.FlatAppearance.BorderColor = Color.White
-        Button1.FlatAppearance.BorderSize = 3
-        Button1.FlatAppearance.MouseDownBackColor = Color.DarkOrchid
-        Button1.FlatAppearance.MouseOverBackColor = Color.Violet
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.ForeColor = SystemColors.ControlLightLight
-        Button1.Location = New Point(173, 176)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 36)
-        Button1.TabIndex = 4
-        Button1.Text = "Log In"
-        Button1.UseVisualStyleBackColor = False
-        ' 
         ' Timer1
         ' 
         Timer1.Enabled = True
         Timer1.Interval = 10
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.ForeColor = SystemColors.ControlLightLight
+        Label5.Location = New Point(41, 236)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(125, 20)
+        Label5.TabIndex = 5
+        Label5.Text = "Username : rasyid"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.ForeColor = SystemColors.ControlLightLight
+        Label6.Location = New Point(187, 236)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(88, 20)
+        Label6.TabIndex = 6
+        Label6.Text = "pw : 123456"
         ' 
         ' Form_input
         ' 
@@ -167,5 +192,7 @@ Partial Class Form_input
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
 
 End Class
