@@ -23,36 +23,36 @@ Public Class Form_mahasiswa
     End Sub
 
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As PrintPageEventArgs)
-        Dim fJudul As Font = New Font("Times New Roman", 12, FontStyle.Bold)
-        Dim fIsi As Font = New Font("Times New Roman", 11, FontStyle.Regular)
-        Dim fNama As Font = New Font("Times New Roman", 12, FontStyle.Bold Or FontStyle.Underline)
+        Dim fJudul As Font = New Font("Times New Roman", 16, FontStyle.Bold)
+        Dim fIsi As Font = New Font("Times New Roman", 13, FontStyle.Regular)
+        Dim fNama As Font = New Font("Times New Roman", 16, FontStyle.Bold Or FontStyle.Underline)
         Dim br As SolidBrush = New SolidBrush(Color.Black)
-        Dim p As Pen = New Pen(Color.Black, 2)
+        Dim p As Pen = New Pen(Color.Black, 3)
 
-        ' Kotak border ijazah
-        e.Graphics.DrawRectangle(p, 50, 50, 500, 400)
+        ' Kotak border ijazah — diperbesar mengisi halaman
+        e.Graphics.DrawRectangle(p, 50, 50, 700, 550)
 
         ' Header
-        e.Graphics.DrawString("KEMENTERIAN PENDIDIKAN", fJudul, br, 200, 70)
-        e.Graphics.DrawString("UNIVERSITAS MULAWARMAN", fJudul, br, 190, 95)
-        e.Graphics.DrawString("Dengan ini menyatakan bahwa :", fIsi, br, 180, 130)
+        e.Graphics.DrawString("KEMENTERIAN PENDIDIKAN", fJudul, br, 230, 80)
+        e.Graphics.DrawString("UNIVERSITAS MULAWARMAN", fJudul, br, 220, 115)
+        e.Graphics.DrawString("Dengan ini menyatakan bahwa :", fIsi, br, 250, 175)
 
         ' Nama & NIM
-        e.Graphics.DrawString(nama.ToUpper(), fNama, br, 220, 165)
-        e.Graphics.DrawString("NIM : " + nim, fIsi, br, 230, 190)
+        e.Graphics.DrawString(nama.ToUpper(), fNama, br, 280, 220)
+        e.Graphics.DrawString("NIM : " + nim, fIsi, br, 310, 255)
 
-        ' Keterangan
-        e.Graphics.DrawString("Telah menyelesaikan studi dan memenuhi segala syarat", fIsi, br, 110, 230)
-        e.Graphics.DrawString("Pendidikan Strata Satu Program Studi " + prodi, fIsi, br, 130, 250)
-        e.Graphics.DrawString("Lulus pada tanggal : 10 Maret 2026", fIsi, br, 170, 275)
+        ' Keterangan lulus
+        e.Graphics.DrawString("Telah menyelesaikan studi dan memenuhi segala syarat", fIsi, br, 160, 310)
+        e.Graphics.DrawString("Pendidikan Strata Satu Program Studi " + prodi, fIsi, br, 200, 340)
+        e.Graphics.DrawString("Lulus pada tanggal : 10 Maret 2026", fIsi, br, 240, 370)
 
         ' Gelar
-        e.Graphics.DrawString("Oleh sebab itu kepadanya diberikan gelar", fIsi, br, 155, 310)
-        e.Graphics.DrawString("SARJANA KOMPUTER (S.KOM)", fJudul, br, 175, 335)
-        e.Graphics.DrawString(predikat, fJudul, br, 230, 360)
+        e.Graphics.DrawString("Oleh sebab itu kepadanya diberikan gelar", fIsi, br, 220, 420)
+        e.Graphics.DrawString("SARJANA KOMPUTER (S.KOM)", fJudul, br, 215, 455)
+        e.Graphics.DrawString(predikat, fJudul, br, 300, 490)
 
         ' Footer
-        e.Graphics.DrawString("Dengan segala kewajiban melekat pada gelar tersebut", fIsi, br, 110, 400)
+        e.Graphics.DrawString("Dengan segala kewajiban melekat pada gelar tersebut", fIsi, br, 165, 545)
     End Sub
 
     Private Sub Btn_kembali_Click(sender As Object, e As EventArgs) Handles Btn_kembali.Click
